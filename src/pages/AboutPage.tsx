@@ -274,6 +274,7 @@ const AboutPage = () => {
         </div>
       </section>
 
+      <PartnerVolunteerForm />
       <FooterSection />
     </div>
   );
