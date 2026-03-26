@@ -8,9 +8,9 @@ const AboutSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-24 md:py-32 bg-warm-surface" ref={ref}>
-      <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+    <section id="about" className="py-16 sm:py-20 md:py-24 lg:py-32 bg-warm-surface" ref={ref}>
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-center">
           {/* Image side */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -18,11 +18,11 @@ const AboutSection = () => {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-elevated">
+            <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-elevated">
               <img
                 src={aboutImage}
                 alt="ACADI volunteer empowering communities"
-                className="w-full h-[500px] object-cover"
+                className="w-full h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] object-cover"
                 loading="lazy"
                 width={800}
                 height={1000}
@@ -33,10 +33,10 @@ const AboutSection = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="absolute -bottom-6 -right-6 bg-card p-6 rounded-xl shadow-elevated border border-border"
+              className="absolute -bottom-4 -right-2 sm:-bottom-6 sm:-right-6 bg-card p-4 sm:p-6 rounded-xl shadow-elevated border border-border"
             >
-              <p className="font-heading text-3xl text-accent">Since 2010</p>
-              <p className="font-body text-sm text-muted-foreground">Serving Nigerian Communities</p>
+              <p className="font-heading text-2xl sm:text-3xl text-accent">Since 2010</p>
+              <p className="font-body text-xs sm:text-sm text-muted-foreground">Serving Nigerian Communities</p>
             </motion.div>
           </motion.div>
 
@@ -45,27 +45,28 @@ const AboutSection = () => {
             initial={{ opacity: 0, x: 40 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
+            className="mt-8 lg:mt-0"
           >
-            <p className="font-body text-sm tracking-[0.2em] uppercase text-accent mb-4 font-semibold">
+            <p className="font-body text-xs sm:text-sm tracking-[0.2em] uppercase text-accent mb-3 sm:mb-4 font-semibold">
               Who We Are
             </p>
-            <h2 className="font-heading text-4xl md:text-5xl text-foreground leading-tight mb-6">
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-foreground leading-tight mb-4 sm:mb-6">
               Faith-Driven Impact{" "}
               <span className="text-gradient-gold">Across Nigeria</span>
             </h2>
-            <p className="font-body text-muted-foreground text-lg leading-relaxed mb-4">
+            <p className="font-body text-muted-foreground text-base sm:text-lg leading-relaxed mb-3 sm:mb-4">
               ACADI is a faith-based NGO established under the Anglican Church of Nigeria
               to intervene in issues affecting communities, individuals, and families.
               We act in an organized, systematic, and sustained manner to overcome the
               daunting challenges facing our nation.
             </p>
-            <p className="font-body text-muted-foreground leading-relaxed mb-8">
+            <p className="font-body text-muted-foreground text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">
               From drug abuse prevention through NAWADA, to malaria intervention,
               youth empowerment, and godly governance training — ACADI is on the
               frontlines of holistic community transformation across all 14 Anglican provinces.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
               {[
                 { icon: Heart, label: "Our Vision", desc: "A godly, peaceful, and prosperous Nigeria" },
                 { icon: Users, label: "Our Mission", desc: "Empowering communities through godly principles" },
@@ -76,13 +77,13 @@ const AboutSection = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.4 + i * 0.15 }}
-                  className="text-center p-4 bg-card rounded-xl shadow-card"
+                  className="text-center p-3 sm:p-4 bg-card rounded-xl shadow-card"
                 >
-                  <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-3">
-                    <item.icon className="w-6 h-6 text-accent" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent/10 rounded-xl flex items-center justify-center mx-auto mb-2 sm:mb-3">
+                    <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-accent" />
                   </div>
-                  <h3 className="font-heading text-lg text-foreground mb-1">{item.label}</h3>
-                  <p className="font-body text-sm text-muted-foreground">{item.desc}</p>
+                  <h3 className="font-heading text-base sm:text-lg text-foreground mb-1">{item.label}</h3>
+                  <p className="font-body text-xs sm:text-sm text-muted-foreground">{item.desc}</p>
                 </motion.div>
               ))}
             </div>
