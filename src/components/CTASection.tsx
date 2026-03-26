@@ -39,9 +39,7 @@ const CTASection = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <a
-              href="https://acadi.org.ng/donation"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/donate"
               className="w-full sm:w-auto px-8 sm:px-10 py-3.5 sm:py-4 bg-destructive text-destructive-foreground font-body font-bold text-sm tracking-wide rounded-full hover:brightness-110 transition-all duration-300 shadow-lg text-center"
             >
               Donate Now

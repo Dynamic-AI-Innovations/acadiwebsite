@@ -8,8 +8,8 @@ const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Programs", href: "/#programs" },
-  { label: "News", href: "/#impact" },
-  { label: "Donate", href: "/#donate" },
+  { label: "News", href: "/news" },
+  { label: "Donate", href: "/donate" },
   { label: "Contact", href: "/#contact" },
 ];
 
@@ -93,12 +93,12 @@ const Navbar = () => {
               "font-body text-sm font-medium text-foreground/80 hover:text-accent transition-colors duration-300 whitespace-nowrap"
             )
           )}
-          <a
-            href="/#donate"
+          <Link
+            to="/donate"
             className="px-5 py-2 sm:px-6 sm:py-2.5 bg-destructive text-destructive-foreground font-body font-bold text-sm rounded-full hover:brightness-110 transition-all shadow-sm whitespace-nowrap"
           >
             Donate
-          </a>
+          </Link>
         </div>
 
         <button
@@ -117,10 +117,14 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden fixed inset-0 top-[52px] sm:top-[56px] bg-card z-40"
+            className="lg:hidden fixed inset-0 top-[52px] sm:top-[56px] z-40"
           >
-            <div className="flex flex-col h-full px-5 sm:px-6 py-6 sm:py-8">
-              <div className="flex flex-col gap-1 flex-1">
+            {/* Dark overlay backdrop */}
+            <div className="absolute inset-0 bg-foreground/60 backdrop-blur-sm" onClick={() => setMobileOpen(false)} />
+
+            {/* Menu content */}
+            <div className="relative bg-card mx-3 sm:mx-4 mt-2 rounded-2xl shadow-elevated overflow-hidden border border-border">
+              <div className="flex flex-col px-5 sm:px-6 py-5 sm:py-6">
                 {navLinks.map((link, i) => (
                   <motion.div
                     key={link.label}
@@ -130,21 +134,29 @@ const Navbar = () => {
                   >
                     {renderLink(
                       link,
-                      "font-body text-foreground text-lg sm:text-xl py-3.5 sm:py-4 border-b border-border/40 hover:text-accent transition-colors block"
+                      `font-body text-foreground text-base sm:text-lg font-bold py-3.5 sm:py-4 border-b border-border/50 hover:text-accent transition-colors block ${
+                        (link.href === location.pathname || (link.href !== "/" && location.pathname.startsWith(link.href)))
+                          ? "text-accent"
+                          : ""
+                      }`
                     )}
                   </motion.div>
                 ))}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                  className="mt-4 sm:mt-5"
+                >
+                  <Link
+                    to="/donate"
+                    onClick={() => setMobileOpen(false)}
+                    className="block px-6 py-3.5 sm:py-4 bg-destructive text-destructive-foreground font-body font-bold text-center text-base sm:text-lg rounded-full hover:brightness-110 transition-all"
+                  >
+                    Donate Now
+                  </Link>
+                </motion.div>
               </div>
-              <motion.a
-                href="/#donate"
-                onClick={() => setMobileOpen(false)}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="mt-4 sm:mt-6 px-6 py-3.5 sm:py-4 bg-destructive text-destructive-foreground font-body font-bold text-center text-base sm:text-lg rounded-full"
-              >
-                Donate Now
-              </motion.a>
             </div>
           </motion.div>
         )}
