@@ -46,37 +46,37 @@ const ProgramsSection = () => {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="programs" className="py-24 md:py-32 bg-background" ref={ref}>
-      <div className="container mx-auto px-6">
+    <section id="programs" className="py-16 sm:py-20 md:py-24 lg:py-32 bg-background" ref={ref}>
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="text-center max-w-2xl mx-auto mb-16"
+          className="text-center max-w-2xl mx-auto mb-10 sm:mb-16"
         >
-          <p className="font-body text-sm tracking-[0.2em] uppercase text-accent mb-4 font-semibold">
+          <p className="font-body text-xs sm:text-sm tracking-[0.2em] uppercase text-accent mb-3 sm:mb-4 font-semibold">
             Our Programs
           </p>
-          <h2 className="font-heading text-4xl md:text-5xl text-foreground leading-tight mb-4">
+          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-foreground leading-tight mb-3 sm:mb-4">
             Transforming Lives Through{" "}
             <span className="text-gradient-gold">Holistic Care</span>
           </h2>
-          <p className="font-body text-muted-foreground text-lg">
+          <p className="font-body text-muted-foreground text-base sm:text-lg">
             From drug abuse prevention to economic empowerment, our programs reach
             every corner of Nigerian communities.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 md:gap-8">
           {programs.map((program, i) => (
             <motion.div
               key={program.title}
               initial={{ opacity: 0, y: 40 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: i * 0.15 }}
-              className="group bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover transition-shadow duration-500"
+              className="group bg-card rounded-xl sm:rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover transition-shadow duration-500"
             >
-              <div className="relative h-56 overflow-hidden">
+              <div className="relative h-40 sm:h-48 md:h-56 overflow-hidden">
                 <img
                   src={program.image}
                   alt={program.title}
@@ -86,21 +86,21 @@ const ProgramsSection = () => {
                   height={600}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 to-transparent" />
-                <span className="absolute top-4 left-4 px-3 py-1 bg-accent/90 text-accent-foreground text-xs font-body font-semibold tracking-wide rounded-full">
+                <span className="absolute top-3 left-3 sm:top-4 sm:left-4 px-3 py-1 bg-accent/90 text-accent-foreground text-[10px] sm:text-xs font-body font-semibold tracking-wide rounded-full">
                   {program.tag}
                 </span>
               </div>
-              <div className="p-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
-                    <program.icon className="w-5 h-5 text-accent" />
+              <div className="p-4 sm:p-5 md:p-6">
+                <div className="flex items-center gap-3 mb-2 sm:mb-3">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 bg-accent/10 rounded-lg flex items-center justify-center shrink-0">
+                    <program.icon className="w-4 h-4 sm:w-5 sm:h-5 text-accent" />
                   </div>
-                  <div>
-                    <h3 className="font-heading text-xl text-foreground">{program.title}</h3>
-                    <p className="font-body text-xs text-muted-foreground">{program.subtitle}</p>
+                  <div className="min-w-0">
+                    <h3 className="font-heading text-lg sm:text-xl text-foreground truncate">{program.title}</h3>
+                    <p className="font-body text-[10px] sm:text-xs text-muted-foreground">{program.subtitle}</p>
                   </div>
                 </div>
-                <p className="font-body text-muted-foreground text-sm leading-relaxed">
+                <p className="font-body text-muted-foreground text-xs sm:text-sm leading-relaxed">
                   {program.desc}
                 </p>
               </div>
