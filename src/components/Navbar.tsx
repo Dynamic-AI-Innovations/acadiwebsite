@@ -3,9 +3,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
+  { label: "Home", href: "#" },
   { label: "About", href: "#about" },
   { label: "Programs", href: "#programs" },
-  { label: "Impact", href: "#impact" },
+  { label: "News", href: "#impact" },
+  { label: "Donate", href: "#donate" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -26,37 +28,35 @@ const Navbar = () => {
       transition={{ duration: 0.6 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-card/95 backdrop-blur-md shadow-card py-3"
-          : "bg-transparent py-5"
+          ? "bg-card/98 backdrop-blur-md shadow-card py-3"
+          : "bg-card/95 backdrop-blur-sm py-4"
       }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-3">
-          <div className={`w-10 h-10 rounded-full bg-accent flex items-center justify-center font-heading text-lg ${scrolled ? "text-accent-foreground" : "text-accent-foreground"}`}>
-            A
+          <div className="w-11 h-11 rounded-full bg-accent flex items-center justify-center">
+            <span className="font-heading text-lg text-accent-foreground leading-none">✝</span>
           </div>
-          <span className={`font-heading text-xl transition-colors duration-300 ${scrolled ? "text-foreground" : "text-primary-foreground"}`}>
+          <span className="font-heading text-2xl text-foreground tracking-tight">
             ACADI
           </span>
         </a>
 
         {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
+        <div className="hidden md:flex items-center gap-7">
+          {navLinks.filter(l => l.label !== "Donate").map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className={`font-body text-sm tracking-wide transition-colors duration-300 hover:text-accent ${
-                scrolled ? "text-foreground" : "text-primary-foreground/90"
-              }`}
+              className="font-body text-sm font-medium text-foreground/80 hover:text-accent transition-colors duration-300"
             >
               {link.label}
             </a>
           ))}
           <a
             href="#donate"
-            className="px-6 py-2.5 bg-accent text-accent-foreground font-body font-semibold text-sm rounded-lg shadow-gold hover:brightness-110 transition-all"
+            className="px-7 py-2.5 bg-destructive text-destructive-foreground font-body font-bold text-sm rounded-full hover:brightness-110 transition-all shadow-sm"
           >
             Donate
           </a>
@@ -65,7 +65,7 @@ const Navbar = () => {
         {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className={`md:hidden ${scrolled ? "text-foreground" : "text-primary-foreground"}`}
+          className="md:hidden text-foreground"
         >
           {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
@@ -78,7 +78,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-card/98 backdrop-blur-lg border-t border-border"
+            className="md:hidden bg-card border-t border-border"
           >
             <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
               {navLinks.map((link) => (
@@ -93,7 +93,8 @@ const Navbar = () => {
               ))}
               <a
                 href="#donate"
-                className="mt-2 px-6 py-3 bg-accent text-accent-foreground font-body font-semibold text-center rounded-lg"
+                onClick={() => setMobileOpen(false)}
+                className="mt-2 px-6 py-3 bg-destructive text-destructive-foreground font-body font-bold text-center rounded-full"
               >
                 Donate Now
               </a>

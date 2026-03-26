@@ -46,7 +46,7 @@ const ProgramsSection = () => {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="programs" className="py-24 md:py-32 bg-secondary" ref={ref}>
+    <section id="programs" className="py-24 md:py-32 bg-background" ref={ref}>
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -54,7 +54,7 @@ const ProgramsSection = () => {
           transition={{ duration: 0.7 }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <p className="font-body text-sm tracking-[0.2em] uppercase text-accent mb-4">
+          <p className="font-body text-sm tracking-[0.2em] uppercase text-accent mb-4 font-semibold">
             Our Programs
           </p>
           <h2 className="font-heading text-4xl md:text-5xl text-foreground leading-tight mb-4">
@@ -74,7 +74,7 @@ const ProgramsSection = () => {
               initial={{ opacity: 0, y: 40 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: i * 0.15 }}
-              className="group bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-shadow duration-500"
+              className="group bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover transition-shadow duration-500"
             >
               <div className="relative h-56 overflow-hidden">
                 <img
@@ -85,7 +85,7 @@ const ProgramsSection = () => {
                   width={800}
                   height={600}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 to-transparent" />
                 <span className="absolute top-4 left-4 px-3 py-1 bg-accent/90 text-accent-foreground text-xs font-body font-semibold tracking-wide rounded-full">
                   {program.tag}
                 </span>

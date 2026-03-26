@@ -25,7 +25,7 @@ const CTASection = () => {
           transition={{ duration: 0.8 }}
           className="max-w-2xl mx-auto text-center"
         >
-          <p className="font-body text-sm tracking-[0.2em] uppercase text-accent mb-4">
+          <p className="font-body text-sm tracking-[0.2em] uppercase text-accent mb-4 font-semibold">
             Join Us
           </p>
           <h2 className="font-heading text-4xl md:text-5xl text-primary-foreground leading-tight mb-6">
@@ -42,7 +42,7 @@ const CTASection = () => {
               href="https://acadi.org.ng/donation"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-10 py-4 bg-accent text-accent-foreground font-body font-bold text-sm tracking-wide rounded-lg shadow-gold hover:brightness-110 transition-all duration-300"
+              className="px-10 py-4 bg-destructive text-destructive-foreground font-body font-bold text-sm tracking-wide rounded-full hover:brightness-110 transition-all duration-300 shadow-lg"
             >
               Donate Now
             </a>
@@ -50,7 +50,7 @@ const CTASection = () => {
               href="https://acadi.org.ng/become-a-volunteer/"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-10 py-4 border border-primary-foreground/30 text-primary-foreground font-body font-medium text-sm tracking-wide rounded-lg hover:bg-primary-foreground/10 transition-all duration-300"
+              className="px-10 py-4 border-2 border-primary-foreground/40 text-primary-foreground font-body font-semibold text-sm tracking-wide rounded-full hover:bg-primary-foreground/10 transition-all duration-300"
             >
               Become a Volunteer
             </a>
@@ -58,7 +58,7 @@ const CTASection = () => {
               href="https://acadi.org.ng/partner"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-10 py-4 border border-accent/40 text-accent font-body font-medium text-sm tracking-wide rounded-lg hover:bg-accent/10 transition-all duration-300"
+              className="px-10 py-4 bg-accent text-accent-foreground font-body font-semibold text-sm tracking-wide rounded-full hover:brightness-110 transition-all duration-300 shadow-gold"
             >
               Partner With Us
             </a>

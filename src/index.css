@@ -18,20 +18,20 @@
     --primary: 210 100% 20%;
     --primary-foreground: 40 33% 98%;
 
-    --secondary: 40 33% 95%;
+    --secondary: 30 30% 94%;
     --secondary-foreground: 210 100% 20%;
 
-    --muted: 40 20% 93%;
+    --muted: 35 20% 93%;
     --muted-foreground: 210 15% 45%;
 
     --accent: 43 76% 52%;
     --accent-foreground: 210 100% 12%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 40 20% 88%;
-    --input: 40 20% 88%;
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
     --ring: 210 100% 20%;
 
     --radius: 0.75rem;
@@ -42,7 +42,12 @@
     --teal-deep: 210 100% 15%;
     --teal-mid: 210 80% 25%;
     --cream: 40 33% 96%;
-    --cream-warm: 38 50% 94%;
+    --cream-warm: 30 40% 92%;
+    --warm-brown: 25 35% 30%;
+    --warm-brown-light: 28 25% 45%;
+    --warm-surface: 32 30% 95%;
+    --cta-red: 8 65% 45%;
+    --cta-red-foreground: 0 0% 100%;
 
     --font-heading: 'DM Serif Display', serif;
     --font-body: 'DM Sans', sans-serif;
@@ -80,10 +85,10 @@
 
   .bg-gradient-hero {
     background: linear-gradient(
-      180deg,
-      hsl(210 100% 15% / 0.85) 0%,
-      hsl(210 100% 20% / 0.7) 50%,
-      hsl(210 100% 15% / 0.9) 100%
+      135deg,
+      hsl(210 100% 10% / 0.7) 0%,
+      hsl(210 60% 15% / 0.5) 40%,
+      hsl(25 30% 20% / 0.4) 100%
     );
   }
 
@@ -103,14 +108,27 @@
     );
   }
 
+  .bg-warm-surface {
+    background: linear-gradient(
+      180deg,
+      hsl(32 30% 95%) 0%,
+      hsl(35 25% 93%) 100%
+    );
+  }
+
   .shadow-elevated {
-    box-shadow: 0 20px 60px -15px hsl(210 100% 15% / 0.2),
-                0 8px 20px -8px hsl(210 100% 15% / 0.1);
+    box-shadow: 0 20px 60px -15px hsl(210 100% 15% / 0.15),
+                0 8px 20px -8px hsl(210 100% 15% / 0.08);
   }
 
   .shadow-card {
-    box-shadow: 0 4px 24px -4px hsl(210 100% 15% / 0.08),
-                0 1px 4px -1px hsl(210 100% 15% / 0.04);
+    box-shadow: 0 4px 24px -4px hsl(25 30% 20% / 0.1),
+                0 1px 4px -1px hsl(25 30% 20% / 0.06);
+  }
+
+  .shadow-card-hover {
+    box-shadow: 0 12px 40px -8px hsl(25 30% 20% / 0.15),
+                0 4px 12px -4px hsl(25 30% 20% / 0.08);
   }
 
   .shadow-gold {
