@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { Heart, Users, BookOpen, Target, Globe, Award, ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
+import PartnerVolunteerForm from "@/components/PartnerVolunteerForm";
 import aboutImage from "@/assets/about-portrait.jpg";
 import heroSlide2 from "@/assets/hero-slide-2.jpg";
 import heroSlide4 from "@/assets/hero-slide-4.jpg";
@@ -273,6 +274,7 @@ const AboutPage = () => {
         </div>
       </section>
 
+      <PartnerVolunteerForm />
       <FooterSection />
     </div>
   );

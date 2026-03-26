@@ -47,17 +47,13 @@ const CTASection = () => {
               Donate Now
             </a>
             <a
-              href="https://acadi.org.ng/become-a-volunteer/"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/about#get-involved"
               className="w-full sm:w-auto px-8 sm:px-10 py-3.5 sm:py-4 border-2 border-primary-foreground/40 text-primary-foreground font-body font-semibold text-sm tracking-wide rounded-full hover:bg-primary-foreground/10 transition-all duration-300 text-center"
             >
               Become a Volunteer
             </a>
             <a
-              href="https://acadi.org.ng/partner"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/about#get-involved"
               className="w-full sm:w-auto px-8 sm:px-10 py-3.5 sm:py-4 bg-accent text-accent-foreground font-body font-semibold text-sm tracking-wide rounded-full hover:brightness-110 transition-all duration-300 shadow-gold text-center"
             >
               Partner With Us
