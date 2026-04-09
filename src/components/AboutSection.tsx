@@ -68,7 +68,7 @@ const AboutSection = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
               {[
-                { icon: Heart, label: "Our Vision", desc: "A godly, peaceful, and prosperous Nigeria" },
+                { icon: Heart, label: "Vision & Mission", desc: "A godly, peaceful, and prosperous Nigeria" },
                 { icon: Users, label: "Our Mission", desc: "Empowering communities through godly principles" },
                 { icon: BookOpen, label: "Our Values", desc: "Faith, compassion, integrity, and service" },
               ].map((item, i) => (

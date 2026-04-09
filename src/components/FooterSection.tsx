@@ -12,13 +12,13 @@ const FooterSection = () => {
               <img
                 src={acadiLogo}
                 alt="ACADI Logo"
-                className="w-10 h-10 sm:w-12 sm:h-12 object-contain brightness-0 invert"
+                className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
               />
               <span className="font-heading text-lg sm:text-xl text-primary-foreground">ACADI</span>
             </div>
             <p className="font-body text-primary-foreground/60 text-sm leading-relaxed">
               Anglican Compassion and Development Initiative — a faith-based NGO
-              under the Anglican Church of Nigeria.
+              under the Church of Nigeria (Anglican Communion).
             </p>
           </div>
 
@@ -92,7 +92,7 @@ const FooterSection = () => {
         {/* Bottom bar */}
         <div className="border-t border-primary-foreground/10 pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
           <span className="font-body text-xs text-primary-foreground/40 text-center sm:text-left">
-            Anglican Church of Nigeria
+            Church of Nigeria (Anglican Communion)
           </span>
           <p className="font-body text-xs text-primary-foreground/40 text-center sm:text-right">
             © {new Date().getFullYear()} ACADI. All rights reserved.
