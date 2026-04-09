@@ -14,6 +14,8 @@ const impactCards = [
 const DonatePage = () => {
   const [copied, setCopied] = useState(false);
   const [activeTab, setActiveTab] = useState<"transfer" | "card">("transfer");
+  const [selectedAmount, setSelectedAmount] = useState<string | null>(null);
+  const [customAmount, setCustomAmount] = useState("");
   const impactRef = useRef(null);
   const impactInView = useInView(impactRef, { once: true, margin: "-80px" });
 
@@ -197,12 +199,34 @@ const DonatePage = () => {
                     {["₦5,000", "₦10,000", "₦20,000", "₦50,000", "₦100,000", "Custom"].map((amt) => (
                       <button
                         key={amt}
-                        className="py-3 sm:py-3.5 rounded-xl border-2 border-border font-body text-sm sm:text-base font-semibold text-foreground hover:border-accent hover:bg-accent/5 transition-all duration-300 focus:border-accent focus:bg-accent/5"
+                        onClick={() => {
+                          setSelectedAmount(amt);
+                          if (amt !== "Custom") setCustomAmount("");
+                        }}
+                        className={`py-3 sm:py-3.5 rounded-xl border-2 font-body text-sm sm:text-base font-semibold transition-all duration-300 ${
+                          selectedAmount === amt
+                            ? "border-accent bg-accent/10 text-foreground"
+                            : "border-border text-foreground hover:border-accent hover:bg-accent/5"
+                        }`}
                       >
                         {amt}
                       </button>
                     ))}
                   </div>
+                  {selectedAmount === "Custom" && (
+                    <div className="mt-3">
+                      <div className="relative">
+                        <span className="absolute left-4 top-1/2 -translate-y-1/2 font-body text-sm font-semibold text-muted-foreground">₦</span>
+                        <input
+                          type="text"
+                          value={customAmount}
+                          onChange={(e) => setCustomAmount(e.target.value.replace(/[^0-9,]/g, ""))}
+                          placeholder="Enter amount"
+                          className="w-full pl-8 pr-4 py-3 bg-muted/50 border border-border rounded-xl font-body text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all"
+                        />
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 {/* Card Form */}

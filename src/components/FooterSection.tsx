@@ -25,13 +25,19 @@ const FooterSection = () => {
           {/* Quick Links */}
           <div>
             <h3 className="font-heading text-base sm:text-lg text-primary-foreground mb-3 sm:mb-4">Quick Links</h3>
-            {["About Us", "Our Projects", "NAWADA Program", "Partner With Us", "Blog"].map((link) => (
+            {[
+              { label: "About Us", href: "/about" },
+              { label: "Our Projects", href: "/#programs" },
+              { label: "Our Team", href: "/team" },
+              { label: "Partner With Us", href: "/about#get-involved" },
+              { label: "Blog", href: "/news" },
+            ].map((link) => (
               <a
-                key={link}
-                href="#"
+                key={link.label}
+                href={link.href}
                 className="block font-body text-sm text-primary-foreground/60 hover:text-accent transition-colors mb-2"
               >
-                {link}
+                {link.label}
               </a>
             ))}
           </div>
