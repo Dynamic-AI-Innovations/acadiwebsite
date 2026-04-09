@@ -25,21 +25,23 @@ const FooterSection = () => {
           {/* Quick Links */}
           <div>
             <h3 className="font-heading text-base sm:text-lg text-primary-foreground mb-3 sm:mb-4">Quick Links</h3>
-            {[
-              { label: "About Us", href: "/about" },
-              { label: "Our Projects", href: "/#programs" },
-              { label: "Our Team", href: "/team" },
-              { label: "Partner With Us", href: "/about#get-involved" },
-              { label: "Blog", href: "/news" },
-            ].map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="block font-body text-sm text-primary-foreground/60 hover:text-accent transition-colors mb-2"
-              >
-                {link.label}
-              </a>
-            ))}
+            <div className="flex flex-col items-start gap-2">
+              {[
+                { label: "About Us", href: "/about" },
+                { label: "Our Projects", href: "/#programs" },
+                { label: "Our Team", href: "/team" },
+                { label: "Partner With Us", href: "/about#get-involved" },
+                { label: "Blog", href: "/news" },
+              ].map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="inline-block whitespace-nowrap font-body text-sm text-primary-foreground/60 hover:text-accent transition-colors"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Social Media */}
