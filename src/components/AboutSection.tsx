@@ -55,7 +55,7 @@ const AboutSection = () => {
               <span className="text-gradient-gold">Across Nigeria</span>
             </h2>
             <p className="font-body text-muted-foreground text-base sm:text-lg leading-relaxed mb-3 sm:mb-4">
-              ACADI is a faith-based NGO established under the Anglican Church of Nigeria
+              ACADI is a faith-based NGO established under the Church of Nigeria (Anglican Communion)
               to intervene in issues affecting communities, individuals, and families.
               We act in an organized, systematic, and sustained manner to overcome the
               daunting challenges facing our nation.

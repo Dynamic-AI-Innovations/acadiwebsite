@@ -18,7 +18,7 @@ const values = [
 ];
 
 const milestones = [
-  { year: "2010", event: "ACADI established under the Anglican Church of Nigeria" },
+  { year: "2010", event: "ACADI established under the Church of Nigeria (Anglican Communion)" },
   { year: "2013", event: "NAWADA program launched for drug abuse prevention" },
   { year: "2015", event: "Expanded to 10 Anglican provinces across Nigeria" },
   { year: "2018", event: "Malaria Intervention Program reaches 50+ communities" },
@@ -120,7 +120,7 @@ const AboutPage = () => {
               </h2>
               <p className="font-body text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed mb-3 sm:mb-4">
                 ACADI — the Anglican Compassion and Development Initiative — is a faith-based
-                non-governmental organization established under the Anglican Church of Nigeria.
+                non-governmental organization established under the Church of Nigeria (Anglican Communion).
                 We intervene in issues affecting communities, individuals, and families through
                 organized, systematic, and sustained action.
               </p>
