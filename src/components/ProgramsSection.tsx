@@ -1,43 +1,34 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Shield, Leaf, Scale, Users } from "lucide-react";
+import { Shield, HeartHandshake, Sprout } from "lucide-react";
 import nawadaImg from "@/assets/programs-nawada.jpg";
-import youthImg from "@/assets/programs-youth.jpg";
-import governanceImg from "@/assets/programs-governance.jpg";
-import empowermentImg from "@/assets/programs-empowerment.jpg";
+import gbvImg from "@/assets/programs-gbv.jpg";
+import cheImg from "@/assets/programs-che.jpg";
 
 const programs = [
   {
     icon: Shield,
-    title: "NAWADA",
-    subtitle: "Drug Abuse Prevention",
-    desc: "National Anglican War Against Drug Abuse — training volunteers, establishing drug-free clubs, and partnering with NDLEA across all provinces.",
+    title: "NAWADA 2",
+    subtitle: "Nigerian Anglicans War Against Drug Abuse and Addiction",
+    desc: "Our flagship initiative tackling drug and substance abuse through prevention, awareness, community sensitization, economic empowerment, family and youth outreaches, counseling, rehabilitation, and treatment. Trained at National and Diocesan level, now cascading down to Archdeaconry and Parish level.",
     image: nawadaImg,
     tag: "Flagship Program",
   },
   {
-    icon: Users,
-    title: "Youth Empowerment",
-    subtitle: "Education & Skills",
-    desc: "Equipping young Nigerians with education, vocational skills, and spiritual mentorship for a brighter future.",
-    image: youthImg,
-    tag: "Education",
+    icon: HeartHandshake,
+    title: "CoN PREVENTGBV",
+    subtitle: "Church of Nigeria Transformational Response to Gender Based Violence",
+    desc: "A 3-year initiative implemented across 130 dioceses, working with 80% of Church of Nigeria Dioceses. Activities include capacity building for Archbishops, Bishops, Clergy and their wives, policy influencing, pre-marital counselling, GBV curriculum integration in theological schools, and media engagement.",
+    image: gbvImg,
+    tag: "Active Project",
   },
   {
-    icon: Scale,
-    title: "Godly Governance",
-    subtitle: "Advocacy & Training",
-    desc: "Advocating for righteous policies and training leaders to influence governance systems toward justice and integrity.",
-    image: governanceImg,
-    tag: "Governance",
-  },
-  {
-    icon: Leaf,
-    title: "Community Development",
-    subtitle: "Agriculture & Health",
-    desc: "Malaria interventions, agricultural cooperatives, nutrition programs, and economic empowerment for families.",
-    image: empowermentImg,
-    tag: "Development",
+    icon: Sprout,
+    title: "CHE",
+    subtitle: "Community Health Evangelism",
+    desc: "A Christ-centered holistic community development project that combines community-owned development with evangelism and discipleship. Communities are equipped to drive their own development across agriculture, health, and other sectors using locally available resources.",
+    image: cheImg,
+    tag: "Community Development",
   },
 ];
 
@@ -58,16 +49,17 @@ const ProgramsSection = () => {
             Our Programs
           </p>
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-foreground leading-tight mb-3 sm:mb-4">
-            Transforming Lives Through{" "}
-            <span className="text-gradient-gold">Holistic Care</span>
+            Current Programs &{" "}
+            <span className="text-gradient-gold">Interventions</span>
           </h2>
           <p className="font-body text-muted-foreground text-base sm:text-lg">
-            From drug abuse prevention to economic empowerment, our programs reach
-            every corner of Nigerian communities.
+            From drug abuse prevention to gender-based violence response and
+            community-led development — our active interventions are reaching
+            dioceses and communities across Nigeria.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
           {programs.map((program, i) => (
             <motion.div
               key={program.title}
