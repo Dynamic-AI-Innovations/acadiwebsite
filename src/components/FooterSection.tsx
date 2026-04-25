@@ -74,7 +74,7 @@ const FooterSection = () => {
               <div className="flex items-start gap-3">
                 <Mail className="w-4 h-4 text-accent mt-0.5 shrink-0" />
                 <p className="font-body text-sm text-primary-foreground/60 break-all">
-                  info@acadi.org.ng
+                  conacadi01@gmail.com
                 </p>
               </div>
               <div className="flex items-center gap-3">

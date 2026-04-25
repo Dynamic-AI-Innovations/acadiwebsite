@@ -161,8 +161,8 @@ const DonatePage = () => {
                       <p className="font-body text-sm font-semibold text-foreground">Important Note</p>
                       <p className="font-body text-xs sm:text-sm text-muted-foreground mt-1 leading-relaxed">
                         After making your transfer, kindly send your payment confirmation to{" "}
-                        <a href="mailto:info@acadi.org.ng" className="text-accent font-semibold hover:underline">
-                          info@acadi.org.ng
+                        <a href="mailto:conacadi01@gmail.com" className="text-accent font-semibold hover:underline">
+                          conacadi01@gmail.com
                         </a>{" "}
                         or WhatsApp us with your receipt for acknowledgment.
                       </p>
