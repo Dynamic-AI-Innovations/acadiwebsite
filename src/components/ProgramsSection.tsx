@@ -49,16 +49,17 @@ const ProgramsSection = () => {
             Our Programs
           </p>
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-foreground leading-tight mb-3 sm:mb-4">
-            Transforming Lives Through{" "}
-            <span className="text-gradient-gold">Holistic Care</span>
+            Current Programs &{" "}
+            <span className="text-gradient-gold">Interventions</span>
           </h2>
           <p className="font-body text-muted-foreground text-base sm:text-lg">
-            From drug abuse prevention to economic empowerment, our programs reach
-            every corner of Nigerian communities.
+            From drug abuse prevention to gender-based violence response and
+            community-led development — our active interventions are reaching
+            dioceses and communities across Nigeria.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
           {programs.map((program, i) => (
             <motion.div
               key={program.title}
