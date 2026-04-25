@@ -120,29 +120,37 @@ const AboutPage = () => {
               </h2>
               <p className="font-body text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed mb-3 sm:mb-4">
                 ACADI — the Anglican Compassion and Development Initiative — is a faith-based
-                non-governmental organization established under the Church of Nigeria (Anglican Communion).
-                We intervene in issues affecting communities, individuals, and families through
-                organized, systematic, and sustained action.
+                non-governmental organization established under the Church of Nigeria (Anglican Communion)
+                to intervene in issues affecting individuals, families and communities, extending
+                the Church's assistance to people in their daily struggles of life.
               </p>
               <p className="font-body text-muted-foreground text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">
-                Our work spans drug abuse prevention (NAWADA), malaria interventions,
-                youth empowerment, godly governance training, agricultural cooperatives,
-                and holistic community development across all 14 Anglican provinces and 36+ states.
+                Registered with the Corporate Affairs Commission of the Federal Government of Nigeria
+                as an Incorporated Trustee on 22 July 2021 (CAC Registration No. 162096), ACADI enables
+                communities to engage with issues of development, welfare, health and other concerns.
               </p>
 
               <div className="grid grid-cols-1 gap-4 sm:gap-5">
                 <div className="bg-card rounded-xl p-4 sm:p-5 shadow-card border-l-4 border-accent">
                   <h3 className="font-heading text-lg sm:text-xl text-foreground mb-1">Our Vision</h3>
                   <p className="font-body text-sm text-muted-foreground">
-                    A godly, peaceful, and prosperous Nigerian nation where people and communities
-                    are free and empowered to worship and serve The Lord.
+                    A godly, peaceful and prosperous Nigerian nation, where the people and
+                    communities are free and empowered to worship and serve The Lord.
                   </p>
                 </div>
                 <div className="bg-card rounded-xl p-4 sm:p-5 shadow-card border-l-4 border-nigerian-green">
                   <h3 className="font-heading text-lg sm:text-xl text-foreground mb-1">Our Mission</h3>
                   <p className="font-body text-sm text-muted-foreground">
-                    To empower Nigerian communities through godly principles, compassionate action,
-                    and sustainable development programs.
+                    To be used of the Holy Spirit to promote the emergence of Nigerian communities,
+                    through teaching godly principles and delivering interventions that teach communities
+                    to be mutually supporting — achieving a nation where godliness, peace and prosperity are sustained.
+                  </p>
+                </div>
+                <div className="bg-card rounded-xl p-4 sm:p-5 shadow-card border-l-4 border-primary">
+                  <h3 className="font-heading text-lg sm:text-xl text-foreground mb-1">Legal Status</h3>
+                  <p className="font-body text-sm text-muted-foreground">
+                    Registered with the Corporate Affairs Commission of the Nigerian Government as an
+                    Incorporated Trustee on 22 July 2021. CAC Registration Number: <span className="font-semibold text-foreground">162096</span>.
                   </p>
                 </div>
               </div>
