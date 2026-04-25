@@ -31,7 +31,7 @@ const FooterSection = () => {
                 { label: "Our Projects", href: "/#programs" },
                 { label: "Our Team", href: "/team" },
                 { label: "Partner With Us", href: "/about#get-involved" },
-                { label: "Blog", href: "/news" },
+                { label: "News", href: "/news" },
               ].map((link) => (
                 <a
                   key={link.label}
