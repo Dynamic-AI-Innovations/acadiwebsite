@@ -1,43 +1,34 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Shield, Leaf, Scale, Users } from "lucide-react";
+import { Shield, HeartHandshake, Sprout } from "lucide-react";
 import nawadaImg from "@/assets/programs-nawada.jpg";
-import youthImg from "@/assets/programs-youth.jpg";
-import governanceImg from "@/assets/programs-governance.jpg";
-import empowermentImg from "@/assets/programs-empowerment.jpg";
+import gbvImg from "@/assets/programs-gbv.jpg";
+import cheImg from "@/assets/programs-che.jpg";
 
 const programs = [
   {
     icon: Shield,
-    title: "NAWADA",
-    subtitle: "Drug Abuse Prevention",
-    desc: "National Anglican War Against Drug Abuse — training volunteers, establishing drug-free clubs, and partnering with NDLEA across all provinces.",
+    title: "NAWADA 2",
+    subtitle: "Nigerian Anglicans War Against Drug Abuse and Addiction",
+    desc: "Our flagship initiative tackling drug and substance abuse through prevention, awareness, community sensitization, economic empowerment, family and youth outreaches, counseling, rehabilitation, and treatment. Trained at National and Diocesan level, now cascading down to Archdeaconry and Parish level.",
     image: nawadaImg,
     tag: "Flagship Program",
   },
   {
-    icon: Users,
-    title: "Youth Empowerment",
-    subtitle: "Education & Skills",
-    desc: "Equipping young Nigerians with education, vocational skills, and spiritual mentorship for a brighter future.",
-    image: youthImg,
-    tag: "Education",
+    icon: HeartHandshake,
+    title: "CoN PREVENTGBV",
+    subtitle: "Church of Nigeria Transformational Response to Gender Based Violence",
+    desc: "A 3-year initiative implemented across 130 dioceses, working with 80% of Church of Nigeria Dioceses. Activities include capacity building for Archbishops, Bishops, Clergy and their wives, policy influencing, pre-marital counselling, GBV curriculum integration in theological schools, and media engagement.",
+    image: gbvImg,
+    tag: "Active Project",
   },
   {
-    icon: Scale,
-    title: "Godly Governance",
-    subtitle: "Advocacy & Training",
-    desc: "Advocating for righteous policies and training leaders to influence governance systems toward justice and integrity.",
-    image: governanceImg,
-    tag: "Governance",
-  },
-  {
-    icon: Leaf,
-    title: "Community Development",
-    subtitle: "Agriculture & Health",
-    desc: "Malaria interventions, agricultural cooperatives, nutrition programs, and economic empowerment for families.",
-    image: empowermentImg,
-    tag: "Development",
+    icon: Sprout,
+    title: "CHE",
+    subtitle: "Community Health Evangelism",
+    desc: "A Christ-centered holistic community development project that combines community-owned development with evangelism and discipleship. Communities are equipped to drive their own development across agriculture, health, and other sectors using locally available resources.",
+    image: cheImg,
+    tag: "Community Development",
   },
 ];
 
