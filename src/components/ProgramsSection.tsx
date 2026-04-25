@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Shield, HeartHandshake, Sprout } from "lucide-react";
+import { Shield, HeartHandshake, Sprout, Home, GraduationCap, Briefcase, Wheat, LifeBuoy, Stethoscope, Users } from "lucide-react";
 import nawadaImg from "@/assets/programs-nawada.jpg";
 import gbvImg from "@/assets/programs-gbv.jpg";
 import cheImg from "@/assets/programs-che.jpg";
@@ -30,6 +30,16 @@ const programs = [
     image: cheImg,
     tag: "Community Development",
   },
+];
+
+const interventionAreas = [
+  { icon: Home, title: "Family Focus", desc: "Strengthening homes through counselling, marriage support, and parenting." },
+  { icon: GraduationCap, title: "Education", desc: "Promoting access to quality learning and life-shaping knowledge." },
+  { icon: Briefcase, title: "Economic Empowerment", desc: "Skills, livelihoods, and enterprise pathways out of poverty." },
+  { icon: Wheat, title: "Agriculture & Nutrition", desc: "Food security through farming cooperatives and nutrition education." },
+  { icon: LifeBuoy, title: "Disaster Response & Relief", desc: "Rapid humanitarian response to communities in crisis." },
+  { icon: Stethoscope, title: "Health", desc: "Preventive care, health education, and community wellness initiatives." },
+  { icon: Users, title: "Youth & Gender", desc: "Targeted programs for young people and both male and female focused interventions." },
 ];
 
 const ProgramsSection = () => {
@@ -99,6 +109,49 @@ const ProgramsSection = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Intervention Areas */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="mt-16 sm:mt-20 md:mt-24"
+        >
+          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
+            <p className="font-body text-xs sm:text-sm tracking-[0.2em] uppercase text-accent mb-3 sm:mb-4 font-semibold">
+              Intervention Areas
+            </p>
+            <h3 className="font-heading text-2xl sm:text-3xl md:text-4xl text-foreground leading-tight mb-3 sm:mb-4">
+              Where We{" "}
+              <span className="text-gradient-gold">Make an Impact</span>
+            </h3>
+            <p className="font-body text-muted-foreground text-sm sm:text-base">
+              Our programs cut across these key areas of community life.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
+            {interventionAreas.map((area, i) => (
+              <motion.div
+                key={area.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.3 + i * 0.08 }}
+                className="group bg-card border border-border rounded-xl p-5 hover:shadow-card-hover hover:border-accent/40 transition-all duration-300"
+              >
+                <div className="w-11 h-11 bg-accent/10 rounded-lg flex items-center justify-center mb-3 group-hover:bg-accent/20 transition-colors">
+                  <area.icon className="w-5 h-5 text-accent" />
+                </div>
+                <h4 className="font-heading text-base sm:text-lg text-foreground mb-1.5">
+                  {area.title}
+                </h4>
+                <p className="font-body text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                  {area.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
