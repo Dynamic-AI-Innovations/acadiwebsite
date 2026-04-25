@@ -18,7 +18,7 @@ const values = [
 ];
 
 const milestones = [
-  { year: "2010", event: "ACADI established under the Church of Nigeria (Anglican Communion)" },
+  { year: "2021", event: "ACADI registered with CAC as an Incorporated Trustee (Reg. No. 162096) under the Church of Nigeria (Anglican Communion)" },
   { year: "2013", event: "NAWADA program launched for drug abuse prevention" },
   { year: "2015", event: "Expanded to 10 Anglican provinces across Nigeria" },
   { year: "2018", event: "Malaria Intervention Program reaches 50+ communities" },
