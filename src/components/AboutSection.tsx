@@ -55,22 +55,22 @@ const AboutSection = () => {
               <span className="text-gradient-gold">Across Nigeria</span>
             </h2>
             <p className="font-body text-muted-foreground text-base sm:text-lg leading-relaxed mb-3 sm:mb-4">
-              ACADI is a faith-based NGO established under the Church of Nigeria (Anglican Communion)
-              to intervene in issues affecting communities, individuals, and families.
-              We act in an organized, systematic, and sustained manner to overcome the
-              daunting challenges facing our nation.
+              The Anglican Compassion and Development Initiative (ACADI) is a faith-based
+              non-governmental organization established under the Church of Nigeria (Anglican Communion)
+              to intervene in issues affecting individuals, families and communities — extending
+              the assistance of the Church to people in their everyday struggles of life.
             </p>
             <p className="font-body text-muted-foreground text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">
-              From drug abuse prevention through NAWADA, to malaria intervention,
-              youth empowerment, and godly governance training — ACADI is on the
-              frontlines of holistic community transformation across all 14 Anglican provinces.
+              Registered with the Corporate Affairs Commission as an Incorporated Trustee on
+              22 July 2021 (CAC No. 162096), ACADI enables communities to engage with issues of
+              development, welfare, health and other concerns across all 14 Anglican provinces.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
               {[
-                { icon: Heart, label: "Vision & Mission", desc: "A godly, peaceful, and prosperous Nigeria" },
-                { icon: Users, label: "Our Mission", desc: "Empowering communities through godly principles" },
-                { icon: BookOpen, label: "Our Values", desc: "Faith, compassion, integrity, and service" },
+                { icon: Heart, label: "Our Vision", desc: "A godly, peaceful and prosperous Nigerian nation where people are free to worship and serve The Lord." },
+                { icon: Users, label: "Our Mission", desc: "Promoting Nigerian communities through godly principles and interventions that teach mutual support." },
+                { icon: BookOpen, label: "Our Values", desc: "Faith, compassion, integrity, and service to all communities." },
               ].map((item, i) => (
                 <motion.div
                   key={item.label}

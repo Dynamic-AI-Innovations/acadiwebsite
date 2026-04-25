@@ -74,7 +74,7 @@ const FooterSection = () => {
               <div className="flex items-start gap-3">
                 <Mail className="w-4 h-4 text-accent mt-0.5 shrink-0" />
                 <p className="font-body text-sm text-primary-foreground/60 break-all">
-                  info@acadi.org.ng
+                  conacadi01@gmail.com
                 </p>
               </div>
               <div className="flex items-center gap-3">
@@ -93,9 +93,10 @@ const FooterSection = () => {
 
         {/* Bottom bar */}
         <div className="border-t border-primary-foreground/10 pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
-          <span className="font-body text-xs text-primary-foreground/40 text-center sm:text-left">
-            Church of Nigeria (Anglican Communion)
-          </span>
+          <div className="font-body text-xs text-primary-foreground/40 text-center sm:text-left space-y-1">
+            <p>Church of Nigeria (Anglican Communion)</p>
+            <p>Registered with CAC as an Incorporated Trustee · Reg. No. 162096</p>
+          </div>
           <p className="font-body text-xs text-primary-foreground/40 text-center sm:text-right">
             © {new Date().getFullYear()} ACADI. All rights reserved.
           </p>
