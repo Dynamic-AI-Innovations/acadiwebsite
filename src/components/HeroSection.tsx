@@ -63,12 +63,12 @@ const featureCards = [
   {
     icon: Heart,
     title: "Mission",
-    desc: "Anglican Compassion & Development Initiative on community development and godly governance.",
+    desc: "To promote Nigerian communities through godly principles and interventions that teach mutual support — sustaining godliness, peace and prosperity.",
   },
   {
     icon: Shield,
     title: "Programs",
-    desc: "NAWADA for drug abuse prevention, Malaria Intervention, Youth empowerment, and health outreach.",
+    desc: "NAWADA 2 against drug abuse, CoN PreventGBV response, and Community Health Evangelism (CHE) across dioceses.",
   },
   {
     icon: Handshake,
